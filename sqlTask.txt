@@ -1,0 +1,26 @@
+Assume a database with the following structure:
+
+Members
+ID	NAME 	ADDRESS	PHONE NUMBER	AGE
+
+Organization
+ID	MEMBER_ID	LOCATION	DUES
+ 
+1.     Write a query that lists each member name, address, dues and location.
+
+SELECT name, address, dues, location 
+FROM Members memb
+FULL JOIN Organization org
+ON memb.id = org.member_id;
+
+2.     Write a SQL Query to pull all members that are over 45
+
+SELECT * FROM Members WHERE age > 45;
+
+3.     Write a SQL Query to pull all members that have a dues value of 0.
+
+SELECT name, address, dues, location 
+FROM Members memb
+JOIN Organization org
+ON memb.id = org.member_id
+WHERE org.dues = 0;
