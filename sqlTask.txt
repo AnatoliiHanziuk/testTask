@@ -21,6 +21,6 @@ SELECT * FROM Members WHERE age > 45;
 
 SELECT name, address, dues, location 
 FROM Members memb
-JOIN Organization org
+LEFT JOIN Organization org
 ON memb.id = org.member_id
 WHERE org.dues = 0;
