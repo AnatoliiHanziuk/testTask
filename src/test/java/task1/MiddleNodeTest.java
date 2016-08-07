@@ -34,7 +34,7 @@ public class MiddleNodeTest {
         Node middleNode = linkedList.getMiddleNode(linkedList);
         assertEquals(middleNode.toString(), "root");
         linkedList.remove(middleNode);
-        assertEquals(linkedList.toString(), "root-");
+        assertEquals(linkedList.toString(), "-");
     }
 
     @Test
@@ -45,7 +45,7 @@ public class MiddleNodeTest {
         Node middleNode = linkedList.getMiddleNode(linkedList);
         assertEquals(middleNode.toString(), "1");
         linkedList.remove(middleNode);
-        assertEquals(linkedList.toString(), "root-1-");
+        assertEquals(linkedList.toString(), "root--");
     }
 
     @Test
