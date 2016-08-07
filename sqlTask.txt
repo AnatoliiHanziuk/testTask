@@ -10,7 +10,7 @@ ID	MEMBER_ID	LOCATION	DUES
 
 SELECT name, address, dues, location 
 FROM Members memb
-FULL JOIN Organization org
+LEFT JOIN Organization org
 ON memb.id = org.member_id;
 
 2.     Write a SQL Query to pull all members that are over 45
