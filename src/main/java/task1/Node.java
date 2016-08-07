@@ -45,4 +45,5 @@ public class Node<T extends Comparable<T>> {
     public void setNextNode(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
+
 }
