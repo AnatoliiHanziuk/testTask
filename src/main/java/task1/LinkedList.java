@@ -39,14 +39,21 @@ public class LinkedList<T extends Comparable<T>>{
     }
 
     public boolean remove(Node node) {
-        if (node == null || node.getNextNode() == null) {
+//        if (node == null || node.getNextNode() == null) {
+        if (node == null) {
             return false;
         }
-        node.getData();
         Node next = node.getNextNode();
-        node.setData(next.getData());
-        node.setNextNode(next.getNextNode());
+        if (node.getNextNode() == null) {
+            node.setData("");
+            node.setNextNode(node.getNextNode());
+        }
+        else {
+            node.setData(next.getData());
+            node.setNextNode(next.getNextNode());
+        }
         return true;
+
     }
 
     public Node getMiddleNode(LinkedList linkedList) {
