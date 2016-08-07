@@ -39,7 +39,6 @@ public class LinkedList<T extends Comparable<T>>{
     }
 
     public boolean remove(Node node) {
-//        if (node == null || node.getNextNode() == null) {
         if (node == null) {
             return false;
         }
